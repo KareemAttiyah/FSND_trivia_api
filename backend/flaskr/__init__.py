@@ -147,7 +147,7 @@ def create_app(test_config=None):
       difficulty = request.get_json()['difficulty']
       category = request.get_json()['category']
 
-      new_question = Question(question,answer,difficulty,category)
+      new_question = Question(question,answer,category,difficulty)
       new_question.insert()
 
       return jsonify({
